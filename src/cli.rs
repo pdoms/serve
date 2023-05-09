@@ -46,7 +46,7 @@ impl Default for Cli {
         Self {
             host: DEF_HOST.to_string(),
             port: DEF_PORT.to_string(),
-            address: format!("http://{DEF_HOST}:{DEF_PORT}"),
+            address: format!("{DEF_HOST}:{DEF_PORT}"),
             index: PathBuf::from(DEF_ASSETS), 
         }
     }
@@ -86,7 +86,8 @@ impl Cli {
 
                 }
             } else {
-                cli.address = format!("http://{h}:{p}", h = cli.host, p = cli.port);
+                cli.address = format!("{h}:{p}", h = cli.host, p = cli.port);
+                println!("Will run server at: {}", cli.address);
                 break cli
             }
         }
