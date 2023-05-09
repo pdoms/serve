@@ -9,6 +9,19 @@ Clone this repo.
 Run: 
 ```console
 $ cargo build --release
+$ ./target/release/serve_app -p 3000 -h localhost -s dist
 ```
+#Usage
+
+Have a ``dist`` or ``build`` directory with an index.html ready.
+
+|FLAG|EXPECTS|EXPLAINATION                                      |
+|----|-------|--------------------------------------------------|
+| -h | HOST  | define host to serve on                          |
+| -p | PORT  | define port via whicht to serve                  |
+| -s | PORT  | define the source directory from which to serve  |
+
+
+
 
 
